@@ -1,0 +1,34 @@
+# Core Dependencies
+asyncio
+threading
+
+# Network and Communication  
+aiohttp==3.9.1
+websockets==12.0
+
+# GUI
+# tkinter comes with Python
+
+# Data and Serialization
+msgpack==1.0.7
+pyyaml==6.0.1
+
+# Monitoring and Metrics
+psutil==5.9.6
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Utilities
+python-dateutil==2.8.2
+colorama==0.4.6
+tqdm==4.66.1
+
+# Configuration
+python-dotenv==1.0.0
+
+# Performance evaluation
+numpy==1.26.2
+matplotlib==3.8.2
+pandas==2.1.4

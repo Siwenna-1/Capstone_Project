@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  edge-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: edge-node-1
+    ports:
+      - "8001:8001"
+      - "9001:9001"
+    environment:
+      - NODE_TYPE=edge
+      - NODE_ID=edge-1
+      - CONFIG_FILE=config/edge_config.json
+    volumes:
+      - ./config:/app/config
+    networks:
+      - distributed-network
+
+  edge-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: edge-node-2
+    ports:
+      - "8004:8004"
+      - "9004:9004"
+    environment:
+      - NODE_TYPE=edge
+      - NODE_ID=edge-2
+      - CONFIG_FILE=config/edge_config.json
+    volumes:
+      - ./config:/app/config
+    networks:
+      - distributed-network
+
+  core-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: core-node-1
+    ports:
+      - "8002:8002"
+      - "9002:9002"
+    environment:
+      - NODE_TYPE=core
+      - NODE_ID=core-1
+      - CONFIG_FILE=config/core_config.json
+    volumes:
+      - ./config:/app/config
+    networks:
+      - distributed-network
+
+  cloud-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloud-node-1
+    ports:
+      - "10001:10001"
+      - "10002:10002"
+    environment:
+      - NODE_TYPE=cloud
+      - NODE_ID=cloud-1
+      - CONFIG_FILE=config/cloud_config.json
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+    networks:
+      - distributed-network
+
+networks:
+  distributed-network:
+    driver: bridge

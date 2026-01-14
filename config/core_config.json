@@ -1,0 +1,19 @@
+{
+  "node_id": "core-1",
+  "host": "localhost",
+  "port": 8002,
+  "rpc_port": 9002,
+  "edge_nodes": [
+    {"node_id": "edge-1", "host": "localhost", "port": 8001, "rpc_port": 9001},
+    {"node_id": "edge-2", "host": "localhost", "port": 8004, "rpc_port": 9004},
+    {"node_id": "edge-3", "host": "localhost", "port": 8005, "rpc_port": 9005}
+  ],
+  "cloud_nodes": [
+    {"node_id": "cloud-1", "host": "localhost", "port": 10001, "rpc_port": 10002},
+    {"node_id": "cloud-2", "host": "localhost", "port": 10003, "rpc_port": 10004}
+  ],
+  "transaction_timeout": 30.0,
+  "replication_factor": 3,
+  "heartbeat_interval": 1.0,
+  "timeout": 3.0
+}

@@ -1,0 +1,14 @@
+{
+  "node_id": "cloud-1",
+  "host": "localhost",
+  "port": 10001,
+  "rpc_port": 10002,
+  "core_nodes": [
+    {"node_id": "core-1", "host": "localhost", "port": 8002, "rpc_port": 9002},
+    {"node_id": "core-2", "host": "localhost", "port": 8003, "rpc_port": 9003}
+  ],
+  "storage_path": "./data",
+  "replication_factor": 3,
+  "heartbeat_interval": 1.0,
+  "timeout": 5.0
+}
