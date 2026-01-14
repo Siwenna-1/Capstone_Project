@@ -68,18 +68,18 @@ class DistributedSystemGUI:
         self.delay_medium = 2.5  # Medium delay
         self.delay_long = 3.0  # Long delay
         
+        # Load sample configuration FIRST (before GUI setup)
+        self._load_sample_config()
+        
+        # Initialize node states (all up initially)
+        self._initialize_node_states()
+        
         # Setup GUI
         self._setup_gui()
         
         # Start update loop
         self.update_interval = 1000  # ms
         self.update_metrics()
-        
-        # Load sample configuration
-        self._load_sample_config()
-        
-        # Initialize node states (all up initially)
-        self._initialize_node_states()
     
     def _initialize_node_states(self):
         """Initialize all nodes as up."""
@@ -441,6 +441,10 @@ class DistributedSystemGUI:
     
     def _draw_topology(self):
         """Draw the system topology with node states."""
+        # Safety check: ensure sample_config exists
+        if not hasattr(self, 'sample_config') or not self.sample_config:
+            return
+            
         self.topology_canvas.delete("all")
         
         width = self.topology_canvas.winfo_width()
