@@ -10,7 +10,7 @@ websockets==12.0
 # tkinter comes with Python
 
 # Data and Serialization
-msgpack==1.0.7
+msgpack>=1.0.7
 pyyaml==6.0.1
 
 # Monitoring and Metrics
@@ -31,4 +31,4 @@ python-dotenv==1.0.0
 # Performance evaluation
 numpy==1.26.2
 matplotlib==3.8.2
-pandas==2.1.4
+pandas>=2.1.4
