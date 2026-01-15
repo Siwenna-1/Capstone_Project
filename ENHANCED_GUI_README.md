@@ -78,12 +78,4 @@ The enhanced GUI now includes comprehensive demonstrations of all system feature
 - **Demonstrate Migration**: Show process migration
 - **Clear Logs**: Clear log display
 
-## Usage for Presentations
-
-1. **Start the System** - Click "Start System"
-2. **Show Topology** - Explain the three-tier architecture
-3. **Demonstrate Features** - Use the demonstration buttons
-4. **Show Logs** - Explain what's happening in the logs
-5. **Inject Faults** - Show fault tolerance in action
-6. **Observe Recovery** - Show automatic failover
 
