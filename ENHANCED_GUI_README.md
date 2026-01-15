@@ -87,10 +87,3 @@ The enhanced GUI now includes comprehensive demonstrations of all system feature
 5. **Inject Faults** - Show fault tolerance in action
 6. **Observe Recovery** - Show automatic failover
 
-## Presentation Tips
-
-- Use "Clear Logs" before each demonstration
-- Point to the topology to show node states
-- Explain each step as it appears in the logs
-- Use the dimmed nodes to show failures
-- Show metrics to explain load balancing
