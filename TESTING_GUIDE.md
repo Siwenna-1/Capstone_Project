@@ -256,4 +256,4 @@ Make sure the tests are actually running:
 After running tests, you can:
 1. Compare results with targets in `ARCHITECTURE.md`
 2. Update `docs/performance_analysis.md` with your results
-3. Include results in your presentation/report
+
